@@ -1,0 +1,17 @@
+package com.mgiandia.se2ed.ch12.p09abstraction.meteobefore;
+
+public class StationRunner {
+ 
+
+	public static void main(String[] args) {
+		TemperatureSensor temperatureSensor = new MgNdSensor();
+		
+		StationController station = new ConsoleBasedController();
+		station.setTemperatureSensor(temperatureSensor);
+		station.selfTest();
+		station.collectData();
+		
+
+	} 
+
+}
